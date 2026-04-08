@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from PIL import Image
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-frontend_dist = os.path.join(basedir, "..", "frontend", "dist")
+frontend_dist = os.path.abspath(os.path.join(basedir, "..", "frontend", "dist"))
 load_dotenv(os.path.join(basedir, '.env'))
 
 app = Flask(__name__, static_folder=frontend_dist, static_url_path='/')
