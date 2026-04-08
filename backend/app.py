@@ -12,9 +12,10 @@ from dotenv import load_dotenv
 from PIL import Image
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+frontend_dist = os.path.join(basedir, "..", "frontend", "dist")
 load_dotenv(os.path.join(basedir, '.env'))
 
-app = Flask(__name__, static_folder='dist', static_url_path='/')
+app = Flask(__name__, static_folder=frontend_dist, static_url_path='/')
 CORS(app)
 
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
