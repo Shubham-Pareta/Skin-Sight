@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode {
+  background: #0f172a;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Global Styles */
+.app.dark {
+  background: #0f172a;
+}
+
+.app.dark .upload-page {
+  background: #0f172a;
+}
+
+.app.dark .hero-section {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+.app.dark .hero-section h1 {
+  color: #f1f5f9;
+}
+
+.app.dark .hero-section p {
+  color: #94a3b8;
+}
+
+.app.dark .badge {
+  background: #334155;
+  color: #818cf8;
+}
+
+.app.dark .upload-card {
+  background: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark .upload-card h3 {
+  color: #f1f5f9;
+}
+
+.app.dark .subtitle {
+  color: #94a3b8;
+}
+
+.app.dark .upload-area {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.app.dark .placeholder p {
+  color: #cbd5e0;
+}
+
+.app.dark .placeholder small {
+  color: #64748b;
+}
+
+.app.dark .diseases-page {
+  background: #0f172a;
+}
+
+.app.dark .diseases-header h1 {
+  color: #f1f5f9;
+}
+
+.app.dark .diseases-header p {
+  color: #94a3b8;
+}
+
+.app.dark .disease-card {
+  background: #1e293b;
+}
+
+.app.dark .disease-card-body {
+  background: #1e293b;
+}
+
+.app.dark .disease-section strong {
+  color: #818cf8;
+}
+
+.app.dark .disease-section p,
+.app.dark .disease-section li {
+  color: #cbd5e0;
+}
+
+.app.dark .result-page {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 100%);
+}
+
+.app.dark .image-card,
+.app.dark .prediction-card {
+  background: #1e293b;
+}
+
+.app.dark .image-card h3,
+.app.dark .prediction-header h3 {
+  color: #f1f5f9;
+}
+
+.app.dark .prediction-header {
+  border-bottom-color: #334155;
+}
+
+.app.dark .disease-name label {
+  color: #94a3b8;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: popupSlide 0.3s ease;
+}
+
+.app.dark .popup-content {
+  background: #1e293b;
+}
+
+.popup-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.popup-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #dc2626;
+}
+
+.popup-content p {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.app.dark .popup-content p {
+  color: #cbd5e0;
+}
+
+.popup-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.popup-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupSlide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
