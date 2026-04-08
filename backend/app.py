@@ -86,7 +86,7 @@ def fetch_disease_details(disease_name):
     except:
         return {"description": "Error fetching details.", "symptoms": [], "treatment": "Consult doctor", "urgency": "Routine"}
 
-@app.route('/api/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
         return jsonify({'error': 'no_image'}), 400

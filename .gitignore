@@ -19,9 +19,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Large Model Files
-*.h5
-
 # OS & IDE
 .DS_Store
 .vscode/
