@@ -467,3 +467,31 @@
     font-size: 16px;
   }
 }
+
+/* Fix for treatment text being cut off */
+.info-card .card-content p {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.info-grid-simple {
+  overflow: visible;
+}
+
+.prediction-card {
+  overflow: visible;
+}

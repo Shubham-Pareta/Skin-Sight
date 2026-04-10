@@ -156,9 +156,9 @@ function App() {
 
     const formData = new FormData();
     formData.append('image', selectedImage);
-
+//https://skinsight-y39k.onrender.com
     try {
-      const response = await fetch('https://skinsight-y39k.onrender.com/predict', {
+      const response = await fetch('/predict', {
         method: 'POST',
         body: formData,
       });
